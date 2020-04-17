@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "356242281895",
+    "firebase_url": "https://unclesamhealthfoods.firebaseio.com",
+    "project_id": "unclesamhealthfoods",
+    "storage_bucket": "unclesamhealthfoods.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:356242281895:android:dd313e26bce0f59948d282",
+        "android_client_info": {
+          "package_name": "com.ninsik.unclesamhfadmin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "356242281895-gami049t5eq2if03r78luo67m7c9hcv5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUMyVWeaWnkMwiVQhoLRAPoh0dDE8spi8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "356242281895-gami049t5eq2if03r78luo67m7c9hcv5.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
