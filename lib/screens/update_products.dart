@@ -54,7 +54,7 @@ class _UpdateProductsState extends State<UpdateProducts> {
       productDetails = data;
       _currentCategory = productDetails[0].data['category'];
     });
-    print(productDetails[0].data['required']);
+    print(productDetails[0].data['description']);
   }
 
   @override
@@ -270,21 +270,17 @@ class _UpdateProductsState extends State<UpdateProducts> {
                     Padding(
                       padding: const EdgeInsets.all(12.0),
                       child: TextFormField(
-
                         controller: descriptionController,
                         maxLines: null,
                         keyboardType: TextInputType.multiline,
-
                         decoration: InputDecoration(
-                            hintText:
-                            "Enter a description of the product"),
+                            hintText: productDetails[0].data['description'] ?? ''),
                         validator: (value) {
                           if (value.isEmpty) {
                             return 'You must enter a description of the product';
                           }
                           return null;
                         },
-
                       ),
                     ),
 
@@ -309,7 +305,7 @@ class _UpdateProductsState extends State<UpdateProducts> {
     setState(() {
       categories = data;
       categoriesDropDown = getCategoriesDropDown();
-      _currentCategory = categories[0].data['Category'];
+      _currentCategory = " ";
     });
   }
 

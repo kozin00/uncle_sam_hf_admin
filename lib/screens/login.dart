@@ -67,13 +67,7 @@ class _LoginState extends State<Login> {
                           elevation: 18.0,
                           child: Row(
                             children: <Widget>[
-                              Padding(
-                                padding: const EdgeInsets.only(left: 35.0),
-                                child: Image.asset(
-                                  'images/google_logo.jpg',
-                                  height: 35.0,
-                                ),
-                              ),
+
                               Padding(
                                 padding: const EdgeInsets.only(left: 10.0),
                                 child: Text(

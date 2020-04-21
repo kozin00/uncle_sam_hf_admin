@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "356242281895-1gi6uk1ppc6rr7tbr1l1gio5rj36h33k.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.ninsik.unclesamhfadmin",
+            "certificate_hash": "752ba6e2854f5278248a531be7b597fc5a7bef38"
+          }
+        },
+        {
           "client_id": "356242281895-gami049t5eq2if03r78luo67m7c9hcv5.apps.googleusercontent.com",
           "client_type": 3
         }

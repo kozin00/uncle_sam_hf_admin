@@ -71,9 +71,9 @@ class _AdminState extends State<Admin> {
         .getDocuments()
         .then((snap) => snap.documents);
     setState(() {
-      categoryNumber = /*categoryData.length ??*/ 0;
-      productsNumber = /*productsData.length ??*/ 0;
-      usersNumber = /*userData.length ??*/ 0;
+      categoryNumber =  categoryData.length ?? 0;
+      productsNumber = productsData.length ?? 0;
+      usersNumber = userData.length ?? 0;
     });
   }
 
@@ -129,8 +129,7 @@ class _AdminState extends State<Admin> {
         if (!snapshot.hasData) {
           return Container();
         } else {
-          var data = snapshot.data.documents;
-          categoriesList = data;
+          categoriesList = snapshot.data.documents;
           return categoriesList.length == 0
               ? Container(
                   child: Center(
@@ -140,13 +139,14 @@ class _AdminState extends State<Admin> {
               : ListView.builder(
                   itemCount: categoriesList.length,
                   itemBuilder: (context, index) {
+
                     return ListTile(
                       title: Text(categoriesList[index].data['Category']),
                       trailing: IconButton(
                         icon: Icon(Icons.delete),
                         onPressed: () {
-                          _removeProduct(categoriesList[index].data['name'],
-                              categoriesList[index].data['id'], 1);
+                          _removeProduct(categoriesList[index].data['Category'],
+                              categoriesList[index].documentID, 1);
                         },
                       ),
                     );

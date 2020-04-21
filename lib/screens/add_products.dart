@@ -86,8 +86,8 @@ class _AddProductsState extends State<AddProducts> {
                               height: 200,
                               width: 100,
                               child: OutlineButton(
-                                borderSide: BorderSide(
-                                    color: grey.withOpacity(0.5), width: 2.5),
+                                borderSide: (_image1 == null) ? BorderSide(
+                                    color: grey.withOpacity(0.5), width: 2.5) : BorderSide(color: Colors.white),
                                 onPressed: () {
                                   _selectImage(
                                       ImagePicker.pickImage(
@@ -106,8 +106,8 @@ class _AddProductsState extends State<AddProducts> {
                               width: 100,
                               height: 200,
                               child: OutlineButton(
-                                borderSide: BorderSide(
-                                    color: grey.withOpacity(0.5), width: 2.5),
+                                borderSide:  (_image2 == null) ? BorderSide(
+                                    color: grey.withOpacity(0.5), width: 2.5) : BorderSide(color: Colors.white),
                                 onPressed: () {
                                   _selectImage(
                                       ImagePicker.pickImage(
@@ -243,7 +243,7 @@ class _AddProductsState extends State<AddProducts> {
 
                         decoration: InputDecoration(
                             hintText:
-                            "Enter a description of the product"),
+                            " Enter a description of the product"),
                         validator: (value) {
                           if (value.isEmpty) {
                             return 'You must enter a description of the product';
@@ -325,14 +325,11 @@ class _AddProductsState extends State<AddProducts> {
         ),
       );
     } else {
-      return Padding(
-        padding: const EdgeInsets.all(8.0),
-        child: Container(
-          child: Image.file(
-            _image1,
-            fit: BoxFit.fill,
-            width: double.infinity,
-          ),
+      return Container(
+        child: Image.file(
+          _image1,
+          fit: BoxFit.fill,
+          width: double.infinity,
         ),
       );
     }
